@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/el-mike/restrict"
-	"github.com/el-mike/restrict/adapters"
+	"github.com/el-mike/restrict/v2"
+	"github.com/el-mike/restrict/v2/adapters"
 	"github.com/gin-gonic/gin"
 )
 
@@ -23,8 +23,8 @@ func authenticateUser(c *gin.Context) (*User, error) {
 	// ... Authentication logic (For example JWT parsing).
 
 	return &User{
-		ID:   TestUserId,
-		Role: "User",
+		ID:    TestUserId,
+		Roles: []string{"User"},
 	}, nil
 }
 

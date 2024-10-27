@@ -1,6 +1,6 @@
 package main
 
-import "github.com/el-mike/restrict"
+import "github.com/el-mike/restrict/v2"
 
 var Policy = &restrict.PolicyDefinition{
 	PermissionPresets: restrict.PermissionPresets{
